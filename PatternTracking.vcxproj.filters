@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos\images">
+      <UniqueIdentifier>{131fa78f-bedf-436a-a383-3f3cece667b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\Captura1.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura2.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura3.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura4.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura12.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura11.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura6.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura5.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura13.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura14.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura15.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\Captura16.PNG">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\marker.png">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\pattern.png">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+    <Image Include="images\pattern_01.png">
+      <Filter>Archivos de recursos\images</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
