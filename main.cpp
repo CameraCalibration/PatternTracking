@@ -198,7 +198,7 @@ static void locate_point(Mat& img, Subdiv2D& subdiv, Point2f fp, Scalar active_c
 /** @function main */
 int main(int argc, char** argv)
 {
-	VideoCapture cap("videos/PadronAnillos_01.avi");
+	VideoCapture cap("videos/PadronAnillos_03.avi");
 
 	// Check if camera opened successfully
 	if (!cap.isOpened()) {
@@ -206,7 +206,7 @@ int main(int argc, char** argv)
 		return -1;
 	}
 
-	char time[45], id[3];
+	char time[55], id[3];
 	double start_time, gray_time, blur_time, threshold_time, canny_time, ellipse_time, grid_time;
 	int all = 0, full = 0;
 
@@ -308,6 +308,10 @@ int main(int argc, char** argv)
 			draw_point(src, p, color);
 		}
 		grid_time = omp_get_wtime() - start_time;
+
+		if (PointBuffer.size() == 30)
+			full++;
+		all++;
 		
 
 		sprintf_s(time, "Gray Time: %.3f", gray_time);
@@ -320,9 +324,9 @@ int main(int argc, char** argv)
 
 		sprintf_s(time, "Threshold Time: %.3f", threshold_time);
 		putText(src_threshold, time, Point2f(15, 25), FONT_HERSHEY_PLAIN, 1.5, Scalar(0, 0, 255, 255), 2);
-		imshow("Threshold", src_blur);
+		imshow("Threshold", src_threshold);
 
-		sprintf_s(time, "Blur Time: %.3f", canny_time);
+		sprintf_s(time, "Canny Time: %.3f", canny_time);
 		putText(src_canny, time, Point2f(15, 25), FONT_HERSHEY_PLAIN, 1.5, Scalar(0, 0, 255, 255), 2);
 		imshow("Canny Filter", src_canny);
 
@@ -330,9 +334,14 @@ int main(int argc, char** argv)
 		putText(src_ellipses, time, Point2f(15, 25), FONT_HERSHEY_PLAIN, 1.5, Scalar(0, 0, 255, 255), 2);
 		imshow("Ellipses", src_ellipses);
 
-		sprintf_s(time, "Grid Time: %.3f - Total Time: %.3f", grid_time, gray_time+blur_time+threshold_time+canny_time+ellipse_time+grid_time);
+		sprintf_s(time, "Grid Time: %.3f - Total Time: %.3f - Acc: %.2f", grid_time, gray_time+blur_time+threshold_time+canny_time+ellipse_time+grid_time, 100.0*(float)full / float(all));
 		putText(src, time, Point2f(15, 25), FONT_HERSHEY_PLAIN, 1.5, Scalar(0, 0, 255, 255), 2);
 		imshow("Points", src);
+
+		if (all == 200) {
+			all = 0;
+			full = 0;
+		}
 
 		// Press  ESC on keyboard to exit
 		char c = (char)waitKey(25);
