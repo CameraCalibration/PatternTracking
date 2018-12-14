@@ -16,6 +16,9 @@
     <Filter Include="Archivos de recursos\images">
       <UniqueIdentifier>{131fa78f-bedf-436a-a383-3f3cece667b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="videos">
+      <UniqueIdentifier>{5a18be67-9ca5-4e3e-b402-6ea863942020}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -68,5 +71,25 @@
     <Image Include="images\pattern_01.png">
       <Filter>Archivos de recursos\images</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="videos\PadronAnillos_01.avi">
+      <Filter>videos</Filter>
+    </None>
+    <None Include="videos\PadronAnillos_02.avi">
+      <Filter>videos</Filter>
+    </None>
+    <None Include="videos\PadronAnillos_03.avi">
+      <Filter>videos</Filter>
+    </None>
+    <None Include="videos\PadronCirculos_01.avi">
+      <Filter>videos</Filter>
+    </None>
+    <None Include="videos\PadronCirculos_02.avi">
+      <Filter>videos</Filter>
+    </None>
+    <None Include="videos\PadronCirculos_03.avi">
+      <Filter>videos</Filter>
+    </None>
   </ItemGroup>
 </Project>

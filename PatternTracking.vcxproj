@@ -173,6 +173,14 @@
     <Image Include="images\pattern.png" />
     <Image Include="images\pattern_01.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="videos\PadronAnillos_01.avi" />
+    <None Include="videos\PadronAnillos_02.avi" />
+    <None Include="videos\PadronAnillos_03.avi" />
+    <None Include="videos\PadronCirculos_01.avi" />
+    <None Include="videos\PadronCirculos_02.avi" />
+    <None Include="videos\PadronCirculos_03.avi" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
